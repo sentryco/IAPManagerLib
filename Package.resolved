@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "asn1swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tikhop/ASN1Swift",
+      "state" : {
+        "revision" : "b53bee03a942623db25afc5bfb80227b2cb3b425",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "filesugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/FileSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "91ec7dd89e72f517500b9d22110277d53ddbe711"
+      }
+    },
+    {
+      "identity" : "jsonsugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/JSONSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "eefc3ace52e27b9ba4f9fdf24ed1b348fa0b4eff"
+      }
+    },
+    {
+      "identity" : "logger",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/Logger.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e2e9ed1895b93c17b70f855c757268aead6dd36b"
+      }
+    },
+    {
+      "identity" : "resultsugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/ResultSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "970dee9816232258bd985593637170893442cd4e"
+      }
+    },
+    {
+      "identity" : "tpinappreceipt",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tikhop/TPInAppReceipt.git",
+      "state" : {
+        "revision" : "5b830d6ce6c34bb4bb976917576ab560e7945037",
+        "version" : "3.3.4"
+      }
+    },
+    {
+      "identity" : "userdefaultsugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/UserDefaultSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "efff58f906c95b57aa7c806cefdae1bd1244c252"
+      }
+    }
+  ],
+  "version" : 2
+}
