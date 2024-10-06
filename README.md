@@ -7,6 +7,12 @@
 - Simple callbacks to get operations done
 - Local and server validation of receipts
 
+## Swift Package Manager
+
+```swift
+.package(url: "https://github.com/sentryco/IAPManagerLib.git", branch: "main")
+```
+
 ### Description:
 - By validating receipt locally we don't have to make a server that handles validation (doesn't always require network)
 - We use apple StoreKit API calls to make purchases etc (requires network)
