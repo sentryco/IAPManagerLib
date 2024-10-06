@@ -12,7 +12,7 @@
 ## Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/sentryco/IAPManagerLib.git", branch: "main")
+.package(url: "https://github.com/sentryco/IAPManagerLib", branch: "main")
 ```
 
 ### Description:
