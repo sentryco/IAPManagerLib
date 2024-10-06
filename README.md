@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/IAPManagerLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/IAPManagerLib/actions/workflows/Tests.yml)
+
 # IAPManagerLib
 
 > Lightweight In-App-Purchase library
