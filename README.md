@@ -1,4 +1,5 @@
 [![Tests](https://github.com/sentryco/IAPManagerLib/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/IAPManagerLib/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/5ad4fd95-f765-4113-b5a0-0c8f53819f1e)](https://codebeat.co/projects/github-com-sentryco-iapmanagerlib-main)
 
 # IAPManagerLib
 
