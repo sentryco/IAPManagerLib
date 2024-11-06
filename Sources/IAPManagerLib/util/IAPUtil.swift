@@ -34,12 +34,12 @@ extension IAPUtil {
    public static func refreshLocalReceipt() {
       Self.refreshLocalReceipt { (result: Result<[InAppPurchase], Error>) in // Refresh the local receipt and get the result
          Logger.debug("\(Trace.trace())") // Log a debug message with the current trace
-         guard let purchases: [InAppPurchase] = try? result.get() else { 
-            Logger.error("\(Trace.trace()) - Err: \(result.getError())") 
-            return 
+         guard let purchases: [InAppPurchase] = try? result.get() else {
+            Logger.error("\(Trace.trace()) - Err: \(result.getError())")
+            return
          } // Get the purchases from the result, log an error message if there is an error, and return if the purchases are nil
-         purchases.forEach { 
-            Logger.debug("\(Trace.trace()) - $0.productIdentifier: \($0.productIdentifier)") 
+         purchases.forEach {
+            Logger.debug("\(Trace.trace()) - $0.productIdentifier: \($0.productIdentifier)")
          } // Loop through each purchase and log a debug message with the product identifier
       }
    }
@@ -70,8 +70,8 @@ extension IAPUtil {
       Logger.debug("\(Trace.trace())") // Log a debug message with the current trace
       LocalReceiptValidator.getPurchases(refresh: true) { (result: Result<[InAppPurchase], Error>) in // Get the purchases from the local receipt and get the result
          Logger.debug("\(Trace.trace()) - getPurchases") // Log a debug message with the current trace and "getPurchases"
-         guard let purchases: [InAppPurchase] = try? result.get() else { 
-            Swift.print("testValidatingReceipt - Err: ⚠️️ \(result.getError())") 
+         guard let purchases: [InAppPurchase] = try? result.get() else {
+            Swift.print("testValidatingReceipt - Err: ⚠️️ \(result.getError())")
             return
          } // Get the purchases from the result, log an error message if there is an error, and return if the purchases are nil
          Logger.debug("\(Trace.trace()) - purchases.count: \(purchases.count)") // Log a debug message with the current trace and the number of purchases
@@ -86,7 +86,7 @@ extension IAPUtil {
       */
    public static func restorePurchases(manager: IAPManager) {
       manager.restorePurchases { (result: Result<[String], Error>) in // Restore the purchases and get the result
-         guard let prodIDs: [String] = try? result.get() else { 
+         guard let prodIDs: [String] = try? result.get() else {
             Logger.error("\(Trace.trace()) - Err: \(result.getError())")
             return
          } // Get the product IDs from the result, log an error message if there is an error, and return if the product IDs are nil

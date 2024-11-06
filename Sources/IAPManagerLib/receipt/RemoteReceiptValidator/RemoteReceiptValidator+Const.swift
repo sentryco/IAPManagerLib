@@ -6,7 +6,7 @@ extension RemoteReceiptValidator {
    /**
     * The default native location of the receipt.
     */
-   public static let appStoreReceiptURL: URL? = Bundle.main.appStoreReceiptURL 
+   public static let appStoreReceiptURL: URL? = Bundle.main.appStoreReceiptURL
    /**
     * Returns the server URL for the specified environment.
     * - Parameters:

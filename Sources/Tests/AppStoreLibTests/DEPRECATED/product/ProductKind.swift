@@ -18,7 +18,7 @@ enum ProductType: Codable {
    /// Type that are depleted after one use. Customers can purchase them multiple times.
    // consumablePurchase
    // - Note: Alt name: autoRenewableMonthly
-   case monthlySub(IAPMonthlySubProduct)  
+   case monthlySub(IAPMonthlySubProduct)
    /// Type that customers purchase once. They don't expire.
    /// - Note: Alt name: nonConsumablePurchase
    case nonConsumable(IAPNonConsumable)

@@ -81,22 +81,22 @@ extension Array where Element == InAppPurchase {
     * Type that customers purchase once. They don't expire
     */
    public var nonConsumable: [InAppPurchase] {
-      self.filter({ $0.productType == .nonConsumable }) // Filter the array to only include non-consumable products
+      self.filter { $0.productType == .nonConsumable }
    }
    /**
     * Returns all auto renewable `InAppPurchase`s
     */
    public var autoRenewable: [InAppPurchase] {
-      self.filter({ $0.isRenewableSubscription }) // Filter the array to only include products that are renewable subscriptions
+      self.filter { $0.isRenewableSubscription }
    }
    /**
     * Returns all ACTIVE auto renewable `InAppPurchase`s
     */
    public var activeAutoRenewableSubscription: [InAppPurchase] {
-      self.filter({
+      self.filter {
          $0.isRenewableSubscription && // Filter the array to only include products that are renewable subscriptions
          $0.isActiveAutoRenewableSubscription(forDate: Date()) // Filter the array to only include products that have an active auto-renewable subscription with the current date
-      })
+      }
    }
 }
 /**

@@ -78,13 +78,13 @@ public extension InAppReceipt {
     * Returns all auto renewable `InAppPurchase`s,
     */
    var autoRenewablePurchases: [InAppPurchase] {
-      purchases.filter({ $0.isRenewableSubscription })
+      purchases.filter { $0.isRenewableSubscription }
    }
    /**
     * Returns all ACTIVE auto renewable `InAppPurchase`s,
     */
    var activeAutoRenewableSubscriptionPurchases: [InAppPurchase] {
-      purchases.filter({ $0.isRenewableSubscription && $0.isActiveAutoRenewableSubscription(forDate: Date()) })
+      purchases.filter { $0.isRenewableSubscription && $0.isActiveAutoRenewableSubscription(forDate: Date()) }
    }
    /**
     * The date that the app receipt expires
@@ -96,13 +96,13 @@ public extension InAppReceipt {
     * Returns `true` if any purchases exist, `false` otherwise
     */
    var hasPurchases: Bool {
-      purchases.count > 0
+      !purchases.isEmpty
    }
    /**
     * Returns `true` if any Active Auto Renewable purchases exist, `false` otherwise
     */
    var hasActiveAutoRenewablePurchases: Bool {
-      activeAutoRenewableSubscriptionPurchases.count > 0
+      !activeAutoRenewableSubscriptionPurchases.isEmpty
    }
    var creationDate: Date {
       payload.creationDate
@@ -143,17 +143,17 @@ public extension InAppReceipt {
     * - parameter sort: Sorting block
     */
    func purchases(ofProductIdentifier productIdentifier: String, sortedBy sort: ((InAppPurchase, InAppPurchase) -> Bool)? = nil) -> [InAppPurchase] {
-      let filtered: [InAppPurchase] = purchases.filter({
+      let filtered: [InAppPurchase] = purchases.filter {
          $0.productIdentifier == productIdentifier
-      })
+      }
       if let sort = sort {
-         return filtered.sorted(by: {
+         return filtered.sorted {
             sort($0, $1)
-         })
+         }
       } else {
-         return filtered.sorted(by: {
+         return filtered.sorted {
             $0.purchaseDate > $1.purchaseDate
-         })
+         }
       }
    }
    /**

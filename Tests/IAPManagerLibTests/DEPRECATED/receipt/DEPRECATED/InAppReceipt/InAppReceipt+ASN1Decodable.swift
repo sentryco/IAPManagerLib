@@ -76,12 +76,12 @@ extension InAppReceiptPayload: ASN1Decodable {
 
       let rawData: Data = try asn1d.extractValueData()
       var bundleIdentifier: String = ""
-      var bundleIdentifierData: Data = Data()
+      var bundleIdentifierData = Data()
       var appVersion: String = ""
       var originalAppVersion: String = ""
-      var purchases: [InAppPurchase] = [InAppPurchase]()
-      var opaqueValue: Data = Data()
-      var receiptHash: Data = Data()
+      var purchases = [InAppPurchase]()
+      var opaqueValue = Data()
+      var receiptHash = Data()
       var expirationDate: Date?
       var receiptCreationDate: Date!
       var ageRating: String = ""

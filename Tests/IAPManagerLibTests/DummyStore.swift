@@ -53,9 +53,9 @@ extension DummyStore {
     * - Returns: None.
     */
    private func setPurchase(product: IAPProduct) {
-      guard let data: Data = try? product.encode() else { 
+      guard let data: Data = try? product.encode() else {
          Swift.print("Err, decode prodtype")
-         return 
+         return
       }
       Purchases.model.purchases[product.id] = data
    }
@@ -66,8 +66,8 @@ extension DummyStore {
     * - Returns: The `IAPProduct` with the specified ID, or `nil` if no product was found.
     */
    private func getPurchase(id: String) -> IAPProduct? {
-      guard let product: Data = Purchases.model.purchases[id] else { 
-         return nil 
+      guard let product: Data = Purchases.model.purchases[id] else {
+         return nil
       }
       return try? product.decode()
    }

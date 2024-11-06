@@ -131,8 +131,8 @@ extension IAPManager {
    private func finishTransaction(_ transaction: SKPaymentTransaction) {
       Logger.debug("\(Trace.trace()) - prodID: \(transaction.payment.productIdentifier)") // Log a debug message indicating the product identifier of the transaction payment
       switch transaction.transactionState {
-      case SKPaymentTransactionState.purchased, 
-           SKPaymentTransactionState.restored, 
+      case SKPaymentTransactionState.purchased,
+           SKPaymentTransactionState.restored,
            SKPaymentTransactionState.failed: // Check if the transaction state is purchased, restored, or failed
          SKPaymentQueue.default().finishTransaction(transaction) // Finish the given transaction
       default: break // Do nothing for other transaction states

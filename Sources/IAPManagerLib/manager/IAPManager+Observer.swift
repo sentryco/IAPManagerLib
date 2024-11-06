@@ -14,9 +14,9 @@ extension IAPManager {
     * - Fixme: ⚠️️ If doing `.count` to toggle observer doesn't work. roll back to internal `var observerAdded = false solution
     */
    public func beginObserving() {
-      guard SKPaymentQueue.default().transactionObservers.count == 0 else { 
+      guard SKPaymentQueue.default().transactionObservers.isEmpty else {
          Logger.warn("\(Trace.trace()) - only one observer")
-         return 
+         return
       } // We only allow noe tx observer at the time ( Avoids adding store observer twice etc)
       SKPaymentQueue.default().add(self) // Begin monitor transactions
    }
@@ -24,9 +24,9 @@ extension IAPManager {
     * Store observer remove
     */
    public func stopObserving() {
-      guard SKPaymentQueue.default().transactionObservers.count > 0 else { 
-         Logger.warn("\(Trace.trace()) - only one observer") 
-         return 
+      guard !SKPaymentQueue.default().transactionObservers.isEmpty else {
+         Logger.warn("\(Trace.trace()) - only one observer")
+         return
       } // We only allow noe tx observer at the time ( Avoids adding store observer twice etc)
       SKPaymentQueue.default().remove(self) // Stop monitoring transactions
    }

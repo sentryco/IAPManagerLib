@@ -98,7 +98,7 @@ extension IAPManagerLibTests {
     */
    private static func testReadLocalReceipt() {
       Swift.print("testReadLocalReceipt")
-      LocalReceiptValidator.getPurchases(refresh: false, onComplete: { result in
+      LocalReceiptValidator.getPurchases(refresh: false) { result in
          guard let purchases = try? result.get() else {
             Swift.print("Err: \( result.errorStr)"); return
          } // Use StoreKit to request a new receipt
@@ -110,7 +110,7 @@ extension IAPManagerLibTests {
          }
          let isEligableForFeature: Bool = hasValidMonthlySubscription || hasValidLifeTimePurchase
          Swift.print("isEligableForFeature: \(isEligableForFeature ? "✅" : "🚫")") // Enable a feature of your app
-      })
+      }
    }
    /**
     * Test remote validating receipt

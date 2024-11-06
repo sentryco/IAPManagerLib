@@ -14,7 +14,7 @@ extension RemoteReceiptValidator {
     */
    internal static func parseValidateResultJSON(_ json: [String: Any]?) -> ProductWithExpireDate? {
       // - Fixme: ⚠️️ break out into own method
-      let totalInAppPurchaseList: [[String: Any]] = { 
+      let totalInAppPurchaseList: [[String: Any]] = {
          let receipt: [String: Any]? = json?["receipt"] as? [String: Any] // Get the receipt dictionary from the JSON data
          let inAppPurchaseList: InAppPurchaseList = (receipt?["in_app"] as? [[String: Any]]) ?? [] // Get the in-app purchase list from the receipt dictionary, or an empty array if it is nil
          let latestInAppPurchaseList: InAppPurchaseList = (json?["latest_receipt_info"] as? [[String: Any]]) ?? [] // Get the latest in-app purchase list from the JSON data, or an empty array if it is nil

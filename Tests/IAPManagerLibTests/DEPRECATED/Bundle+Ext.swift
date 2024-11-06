@@ -15,7 +15,6 @@ extension Bundle {
    }
 }
 
-import class Foundation.Bundle
 extension Foundation.Bundle {
    static var module: Bundle =
    {
