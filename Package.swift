@@ -1,11 +1,11 @@
-// swift-tools-version: 5.6
+// swift-tools-version: 5.9
 
 import PackageDescription
 
 let package = Package(
     name: "IAPManagerLib", // Set the name of the package
     // bump swift v to 5.7?
-    platforms: [.iOS(.v15), .macOS(.v12)], // Set the supported platforms for the package
+    platforms: [.iOS(.v17), .macOS(.v14)], // Set the supported platforms for the package
     products: [
         .library(
             name: "IAPManagerLib", // Set the name of the library product
